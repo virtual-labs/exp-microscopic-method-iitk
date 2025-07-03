@@ -1,24 +1,21 @@
 ## Introduction
 
 
-<b>Discipline | <b>Fill your discipline name here
+<b>Discipline | <b>Pharmacy
 :--|:--|
-<b> Lab | <b> Fill your lab name here
-<b> Experiment|     <b> Fill your experiment name and number here
-
+<b> Lab | <b> Physical Pharmaceutics
+<b> Experiment|     <b> To determine the Particle size and Particle size distribution by using Microscopic method 
 ### About the Experiment 
 
-Fill a brief description of this experiment here
 
-<b>Name of Developer | <b> Fill the name of experiment owner here 
+<b>Name of Developer | <b> Anjali Srivastava 
 :--|:--|
-<b> Institute | <b>  
-<b> Email id|     <b>  
-<b> Department |  
+<b> Institute | <b>  Bundelkhand University, Jhansi
+<b> Email id|     <b>  bu.ganjali@bujhansi.ac.in
+<b> Department |  <b> Department of Pharmacy
 
 ### Contributors List
 
 SrNo | Name | Faculty or Student | Department| Institute | Email id
 :--|:--|:--|:--|:--|:--|
-1 | . | . | . | . | .
-2 | . | . | . | . | .
+1 |Harsh Jha | Student|  |  BU Jhansi|jhaharsh467@gmail.com
