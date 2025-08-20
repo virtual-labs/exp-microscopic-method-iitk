@@ -1,0 +1,106 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>multiple page</title>
+    <style>
+      .container1{
+           height: 100vh;
+           width: 100vw;
+           display: block;
+           position: relative;
+           justify-content: center;
+           align-items: center;
+       }
+        .container2{
+            background-color: red;
+            height: 50%;
+            width: 50%;
+            position: relative;
+            background-position: center;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <div class="container2"></div>
+    </div>
+    
+    <div class="container3"></div>
+    <div class="container4"></div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .card {
+      display: inline-block;
+      padding: 20px;
+      background: #eee;
+      border-radius: 10px;
+      position: relative;
+      margin: 50px;
+    }
+
+    .info-box {
+      height: 100px;
+      width: 100px;
+      background: #000;
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      /* display: block;
+      position: absolute;
+      top: 110%;
+      left: 0;
+      background: black;
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      width: 200px; */
+      z-index: 100000;
+    }
+
+    .card.hover-enabled:hover .info-box {
+      display: block;
+    }
+
+    #toggleBtn {
+      margin: 20px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="toggleBtn">Disable Hover</button>
+
+  <div class="card hover-enabled" id="myCard">
+    Hover on me
+    <div class="info-box">
+      Name: John Doe<br>
+      Role: Designer<br>
+      Click toggle to disable this.
+    </div>
+  </div>
+
+  <script>
+    let toggle = true;
+    const card = document.getElementById("myCard");
+    const btn = document.getElementById("toggleBtn");
+
+    btn.addEventListener("click", () => {
+      toggle = !toggle;
+      card.classList.toggle("hover-enabled", toggle);
+      btn.innerText = toggle ? "Disable Hover" : "Enable Hover";
+    });
+  </script>
+
+</body>
+</html>
