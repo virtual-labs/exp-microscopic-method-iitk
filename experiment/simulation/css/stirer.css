@@ -1,8 +1,0 @@
-#stirer {
-  height: 200px;
-  width: 5px;
-  background-color: rgba(189, 195, 199, 0.6);
-  position: absolute;
-  top: -110px;
-  transform: rotate(10deg);
-}
