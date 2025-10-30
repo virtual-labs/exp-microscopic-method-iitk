@@ -1,1 +1,1 @@
-## Particle size and Particle size distribution analysis by Microscopic method 
+## Determination of Particle Size and Particle Size Distribution by Microscopy Method
