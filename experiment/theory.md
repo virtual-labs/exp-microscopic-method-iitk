@@ -1,12 +1,20 @@
-### Introduction<br>
-According to Microscopic method, an emulsion or suspension, diluted or undiluted, is mounted on a slide or ruled cell and placed on a mechanical stage. Eye piece micrometer has a small scale on it. The scale has to be calibrated using a stage micrometer. Stage micrometer is a glass slide having a scale on it. The scale is 1 mm in length, and is divided into 100 parts. The smallest division on the stage micrometer is 0.01 mm or 10 µm in length.
-The exact value of each division on the eyepiece micrometer varies with every optical combination. Hence it should be calibrated with the stage micrometer for every optical combination.
-If we want to measure the particle size under 45 x magnifications, calibration of eyepiece micrometer should be done at 45 x magnification. If particle size is measured under 10 x magnifications, calibration is to be done under 10 x. 
-In the present experiment the calibration of eyepiece micrometer is done under 45 x magnifications.<br>
-### Advantages: <br>
-1. It allows the observer to view the particle.<br>
-2. Preparation of sample is simple and easy.<br>
-### Disadvantages:    <br>
-1. Method is slow and tedious.<br>
-2. Diameter is obtained from two dimensions. i.e., length and breadth.<br>
-3. Depth of particle is not measurable.
+<b>Objectives:</b><br>
+● To determine the average particle size of the given powder.<br>
+● To observe and analyze the variation in particle size within the sample.<br>
+● To use a calibrated microscope for accurate measurement of fine particles.<br>
+● To construct a particle size distribution curve for better visualization and interpretation.<br>
+
+<b>Theory:</b><br>
+Particle size plays a vital role in determining the behavior and quality of materials, particularly in the pharmaceutical industry, where it affects dissolution rate, flow properties, uniformity, bioavailability, and stability.<br>
+
+The microscopy method is a direct technique that involves observing individual particles under an optical microscope. This method is particularly useful for particles in the size range of 1–100 μm.<br>
+
+A stage micrometer is used to calibrate the microscope, converting eyepiece divisions into micrometer units. After calibration, the particle size of a sufficient number of particles (usually 50–100) is measured. The data are grouped into size ranges (class intervals), and a frequency distribution curve or histogram is plotted.<br>
+
+The mean particle diameter (Dₘ) can be determined using the formula:<br>
+Dₘ = Σ(nᵢ × dᵢ) / Σnᵢ<br>
+
+Where:<br>
+ nᵢ = Number of particles in each size range<br>
+ dᵢ = Midpoint of each size range<br>
+The shape of the distribution curve (narrow, broad, or skewed) helps interpret the uniformity of the sample.
