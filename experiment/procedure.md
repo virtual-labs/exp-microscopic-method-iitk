@@ -21,7 +21,7 @@
 ● Group the data into size ranges (e.g., 0–10 µm, 10–20 µm, etc.) and note the frequency of particles in each group.<br>
 ● Plot a histogram or frequency curve of particle size distribution.<br>
 ● Calculate the mean, median, and mode of the distribution.<br>
-● Comment on the distribution type — whether it is narrow, broad, uniform, or skewed.<br>
+● Comment on the distribution type — whether it is narrow, broad, uniform, or skewed. <br>
 
 <b>Observations and Calculations:</b><br>
 ● Microscope calibration factor: ____ µm per eyepiece division.<br>
