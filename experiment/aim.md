@@ -1,1 +1,1 @@
-To measure the size of individual particles and study their distribution in a powder sample using the microscopy method.
+Determination of Particle Size and Particle Size Distribution by Microscopy Method
