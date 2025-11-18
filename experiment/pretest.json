@@ -2,88 +2,37 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1. The microscopy method for particle size analysis is most suitable for particles in the size range of:",
+      "question": "This is a Sample Question 1?",
       "answers": {
-        "a": "0.001–1 μm",
-        "b": "1–100 μm",
-        "c": "1–100 μm",
-        "d": "Above 1 mm"
+        "a": "answer1",
+        "b": "answer2",
+        "c": "answer3",
+        "d": "answer4"
       },
       "explanations": {
-        "a": "Explanation",
-        "b": "Explanation",
-        "c": "Explanation",
-        "d": "Explanation"
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     },
-       {
-      "question": "2. The purpose of calibrating the microscope using a stage micrometer is to:",
+    {
+      "question": "This is a Sample Question 2?",
       "answers": {
-        "a": "Measure the density of particles",
-        "b": "Determine the magnification",
-        "c": "Convert eyepiece divisions into micrometer units",
-        "d": "Focus the image clearly"
+        "a": "answer1",
+        "b": "answer2",
+        "c": "answer3",
+        "d": "answer4"
       },
       "explanations": {
-        "a": "Explanation",
-        "b": "Explanation",
-        "c": "Explanation",
-        "d": "Explanation"
+        "a": "Explanation 1  <a href='www.google.com'>here</a>",
+        "b": "Explanation 2",
+        "c": "Explanation 2",
+        "d": "Explanation 2"
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-        {
-      "question": "3. The instrument used to calibrate the microscope is called:",
-      "answers": {
-        "a": "Compound lens",
-        "b": "Cover slip",
-        "c": "Stage micrometer",
-        "d": "Petri dish"
-      },
-      "explanations": {
-        "a": "Explanation",
-        "b": "Explanation",
-        "c": "Explanation",
-        "d": "Explanation"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-        {
-      "question": "4.  Particle size in pharmaceutical powders is important because it affects:",
-      "answers": {
-        "a": "Colour only",
-        "b": "Packaging cost",
-        "c": "Dissolution rate and bioavailability",
-        "d": "Taste masking"
-      },
-      "explanations": {
-        "a": "Explanation",
-        "b": "Explanation",
-        "c": "Explanation",
-        "d": "Explanation"
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    },
-        {
-      "question": "5. In particle size analysis, the midpoint of each size range (class interval) is used to calculate:",
-      "answers": {
-        "a": "Median particle size",
-        "b": "Mean particle size",
-        "c": "Mode particle size",
-        "d": "Range of sizes"
-      },
-      "explanations": {
-        "a": "Explanation",
-        "b": "Explanation",
-        "c": "Explanation",
-        "d": "Explanation"
-      },
-      "correctAnswer": "b",
       "difficulty": "beginner"
     }
   ]
