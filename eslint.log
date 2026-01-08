@@ -1,0 +1,24 @@
+
+/home/runner/work/exp-microscopic-method-iitk/exp-microscopic-method-iitk/experiment/simulation/js/sampleGlassZoom.js
+  12:19  warning  'nextBtn' is assigned a value but never used  no-unused-vars
+
+/home/runner/work/exp-microscopic-method-iitk/exp-microscopic-method-iitk/experiment/simulation/js/script.js
+  134:34  warning  'gsap' is not defined                 no-undef
+  171:22  warning  'gsap' is not defined                 no-undef
+  292:22  warning  'gsap' is not defined                 no-undef
+  323:11  warning  'drop' is not defined                 no-undef
+  328:11  warning  'drop2' is not defined                no-undef
+  331:11  warning  'drop' is not defined                 no-undef
+  334:11  warning  'drop2' is not defined                no-undef
+  337:11  warning  'glass2' is not defined               no-undef
+  346:11  warning  'glass' is not defined                no-undef
+  391:1   warning  'glass2' is not defined               no-undef
+  414:22  warning  'gsap' is not defined                 no-undef
+  416:17  warning  'glass2' is not defined               no-undef
+  421:11  warning  'glass2' is not defined               no-undef
+  426:11  warning  'glass2' is not defined               no-undef
+  432:9   warning  'glass2' is not defined               no-undef
+  470:15  warning  'nextPage' is defined but never used  no-unused-vars
+
+✖ 17 problems (0 errors, 17 warnings)
+

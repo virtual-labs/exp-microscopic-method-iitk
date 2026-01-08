@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particle Size Distribution by Microscopic Method</title>
+    <link rel="stylesheet" href=".//css/style.css">
+    <style>
+        
+        #section-1{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            display: block;
+        }
+        #section-2{
+            height: 100%;
+            width: 100%;
+            position: relative;
+            z-index: 100;
+            display: none;
+        }
+
+
+        .zoom-controls {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+
+        .zoom-btn {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+        .zoom-btn:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        /* Navigation controls */
+        .nav-controls {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 5px;
+            width: 165px;
+            height: 165px;
+        }
+
+        .nav-btn {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+
+        .nav-btn:hover {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        #nav-up {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        #nav-left {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        #nav-center {
+            grid-column: 2;
+            grid-row: 2;
+            background-color: rgba(50, 50, 50, 0.7);
+        }
+
+        #nav-right {
+            grid-column: 3;
+            grid-row: 2;
+        }
+
+        #nav-down {
+            grid-column: 2;
+            grid-row: 3;
+        }
+
+        /* Next button */
+        .next-btn {
+            position: fixed;
+            z-index: 1000;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #next-btn{
+            top: 13%;
+            right: 1%;
+        }      
+        .next-button{
+            bottom :2%;
+            right: 1%;
+        }
+        .hover-button{
+            top: 13%;
+            right: 1%;
+        }
+        .lang-container{
+            top: 13%;
+            left: 1%;
+        }    
+    
+        /* Additional styles for stageometer to ensure proper zooming and positioning */
+        #stageometer {
+            display: block;
+            transform-origin: center center;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+         .info-box {
+          position: absolute;
+          top: -110%;
+          font-family: 'Courier New', Courier, monospace;
+          background-color: #333;
+          border: rgb(219, 219, 219) solid 1.5px;
+          color: rgb(216, 216, 216);
+          padding: 6px 10px;
+          font-size: 14px;
+          white-space: nowrap;
+          display: none;
+          transition: all 4s ease-in;
+          transition-delay: 4s;
+        }
+        .card.single-piece:hover .info-box{
+          display: block;
+        }
+
+        
+    </style>
+</head>
+<body id="body1">
+          <!-- Welcome Overlay -->
+          <div id="welcome-overlay">
+            <div class="welcome-content">
+              <h1>Particle Size Distribution by Microscopic Method</h1>
+              <p>Welcome to this virtual laboratory experiment. In this simulation, you will learn how to determine particle size distribution using microscopic methods. This is an important technique used in materials science, geology, and many other fields.</p>
+              <p>You will calibrate the stageometer, observe particles under the microscope, and analyze their size distribution.</p>
+              <button class="start-btn" id="start-experiment">Start Experiment</button>
+            </div>
+          </div>
+
+          <!-- section-1 -->
+          <div id="section-1">
+             <div id="instruction-panel">
+                <p id="instruction">Experiment: Particle Size Distribution by Microscopic Method - Click on the stageometer scale to begin calibration</p>
+             </div>
+
+            <!-- <div class="lang-container next-btn">
+             <label for="languageSelect">Choose Language:</label>
+               <select id="languageSelect">
+                 <option value="en-GB">English (UK Female)</option>
+                 <option value="hi-IN">Hindi (Female)</option>
+               </select>
+            </div>
+             -->
+             <button class="next-btn hover-button" id="togglebtn">Disable Hover</button>
+          
+                <div class="card single-piece" id="microscope">
+                    <div class="info-box" style="z-index: 10000;">
+                      <p>Microscope</p>
+                    </div>
+                </div>
+                <div class="card single-piece" id="eyepiece" >
+                    <div class="info-box">
+                      <p>Single-piece</p>
+                    </div>
+                </div>
+                <div  id="single-piece"></div>
+                <div class="card single-piece" id="pucki">
+                    <div class="info-box">
+                      <p>Droper</p>
+                    </div>
+                </div>
+                <div id="beaker"></div>
+                <div class="card single-piece" id="stageometer-scale">
+                    <div class="info-box">
+                      <p>Stageometer-scale</p>
+                    </div>
+                </div>
+                <div id="glass"></div>
+                <div id="glass2"></div>
+                <div id="drop"></div>
+                <div id="drop2"></div>
+
+                <button class="next-btn next-button" id="next-btn1" >next</button>
+                <button class="next-btn next-button" id="next-btn2" style="display: none;">next</button>
+            </div>
+
+          <div id="section-2">
+            <div id="instruction-panel">
+              <p>Stageometer Calibration - Use the zoom and navigation controls to calibrate the stageometer</p>
+            </div>
+           <div id="ched"></div>
+           <div id="stageometer" style="display: block;"></div>
+           <div id="sample-glass" style="display: none;"></div>
+
+              <div class="zoom-controls">
+                  <button class="zoom-btn" id="zoom-in">+</button>
+                  <button class="zoom-btn" id="zoom-out">-</button>
+              </div>
+          
+              <div class="nav-controls">
+                  <button class="nav-btn" id="nav-up">↑</button>
+                  <button class="nav-btn" id="nav-left">←</button>
+                  <button class="nav-btn" id="nav-center">⌂</button>
+                  <button class="nav-btn" id="nav-right">→</button>
+                  <button class="nav-btn" id="nav-down">↓</button>
+              </div>
+
+              <button class="next-btn" id="next-btn">Next Step</button>
+          </div>
+
+       
+          
+          
+          
+
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+          <script src="./js/script.js"></script>
+          <script src="./js/sampleGlassZoom.js"></script>
+
+      <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const stageometer = document.getElementById('stageometer');
+            const zoomInBtn = document.getElementById('zoom-in');
+            const zoomOutBtn = document.getElementById('zoom-out');
+            const navUpBtn = document.getElementById('nav-up');
+            const navLeftBtn = document.getElementById('nav-left');
+            const navCenterBtn = document.getElementById('nav-center');
+            const navRightBtn = document.getElementById('nav-right');
+            const navDownBtn = document.getElementById('nav-down');
+            const nextBtn = document.getElementById('next-btn');
+
+            // Zoom variables
+            let currentScale = 1;
+            const minScale = 0.5;
+            const maxScale = 3;
+            const scaleStep = 0.1;
+
+            // Position variables
+            let posX = 0;
+            let posY = 0;
+            const moveStep = 5; // pixels to move per button click
+
+            // Apply initial styles for zoom and position functionality
+            stageometer.style.transition = 'transform 0.3s ease';
+            stageometer.style.transformOrigin = 'center center';
+
+            function updateTransform() {
+                stageometer.style.transform = `translate(${posX}px, ${posY}px) scale(${currentScale})`;
+            }
+
+            // Zoom in button
+            zoomInBtn.addEventListener('click', function() {
+                if (currentScale < maxScale) {
+                    currentScale += scaleStep;
+                    updateTransform();
+                }
+            });
+
+            // Zoom out button
+            zoomOutBtn.addEventListener('click', function() {
+                if (currentScale > minScale) {
+                    currentScale -= scaleStep;
+                    updateTransform();
+                }
+            });
+
+            // Navigation buttons
+            navUpBtn.addEventListener('click', function() {
+                posY -= moveStep;
+                updateTransform();
+            });
+
+            navLeftBtn.addEventListener('click', function() {
+                posX -= moveStep;
+                updateTransform();
+            });
+
+            navCenterBtn.addEventListener('click', function() {
+                // Reset position to center
+                posX = 0;
+                posY = 0;
+                currentScale = 1;
+                updateTransform();
+            });
+
+            navRightBtn.addEventListener('click', function() {
+                posX += moveStep;
+                updateTransform();
+            });
+
+            navDownBtn.addEventListener('click', function() {
+                posY += moveStep;
+                updateTransform();
+            });
+
+            // Add mouse wheel zoom support
+            stageometer.addEventListener('wheel', function(e) {
+                e.preventDefault(); // Prevent page scrolling
+
+                if (e.deltaY < 0 && currentScale < maxScale) {
+                    // Scroll up - zoom in
+                    currentScale += scaleStep;
+                    updateTransform();
+                } else if (e.deltaY > 0 && currentScale > minScale) {
+                    // Scroll down - zoom out
+                    currentScale -= scaleStep;
+                    updateTransform();
+                }
+            });
+
+            // Add drag functionality
+            let isDragging = false;
+            let startX, startY;
+            let startPosX, startPosY;
+
+            stageometer.addEventListener('mousedown', function(e) {
+                isDragging = true;
+                startX = e.clientX;
+                startY = e.clientY;
+                startPosX = posX;
+                startPosY = posY;
+                stageometer.style.cursor = 'grabbing';
+            });
+
+            document.addEventListener('mousemove', function(e) {
+                if (isDragging) {
+                    const dx = e.clientX - startX;
+                    const dy = e.clientY - startY;
+                    posX = startPosX + dx;
+                    posY = startPosY + dy;
+                    updateTransform();
+                }
+            });
+
+            document.addEventListener('mouseup', function() {
+                isDragging = false;
+                stageometer.style.cursor = 'grab';
+            });
+
+            // Initialize cursor style
+            stageometer.style.cursor = 'grab';
+
+
+            // // Welcome Overlay functionality
+            // const welcomeOverlay = document.getElementById('welcome-overlay');
+            // const startButton = document.getElementById('start-experiment');
+
+            // // Show the welcome overlay when the page loads
+            // welcomeOverlay.style.display = 'flex';
+
+            // // Hide the welcome overlay when the start button is clicked
+            // startButton.addEventListener('click', function() {
+            //     welcomeOverlay.classList.add('hidden');
+
+            //     // Remove the overlay from the DOM after the transition completes
+            //     setTimeout(function() {
+            //         welcomeOverlay.style.display = 'none';
+            //     }, 500);
+            // });
+        });
+    </script>
+    <script>
+    let toggle = true;
+    const card = document.getElementById("single-piece");
+    const btn = document.getElementById("togglebtn");
+
+    btn.addEventListener("click", () => {
+      toggle = !toggle;
+      card.classList.toggle("card");
+      btn.innerText = toggle ? "Disable Hover" : "Enable Hover";
+    });
+  </script>
+  
+<script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>

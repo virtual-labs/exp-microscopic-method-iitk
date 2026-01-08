@@ -1,0 +1,90 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. The mean particle diameter (Dₘ) is calculated using the formula:",
+      "answers": {
+        "a": "Dₘ = Σdᵢ / nᵢ",
+        "b": "Dₘ = Σ(nᵢ × dᵢ) / Σnᵢ",
+        "c": "Dₘ = nᵢ / Σdᵢ",
+        "d": "Dₘ = Σ(dᵢ)² / Σnᵢ"
+      },
+      "explanations": {
+        "a": "Explanation",
+        "b": "Explanation",
+        "c": "Explanation",
+        "d": "Explanation"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+       {
+      "question": "2. The type of distribution curve that indicates uniform particle size is:",
+      "answers": {
+        "a": "Broad distribution",
+        "b": "Skewed distribution",
+        "c": "Narrow distribution",
+        "d": "Bimodal distribution"
+      },
+      "explanations": {
+        "a": "Explanation",
+        "b": "Explanation",
+        "c": "Explanation",
+        "d": "Explanation"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+        {
+      "question": "3. If particle readings fluctuate significantly, it indicates:",
+      "answers": {
+        "a": "Perfect sample uniformity",
+        "b": "Incorrect magnification",
+        "c": "Non-uniform particle distribution",
+        "d": "Over-calibration of the microscope"
+      },
+      "explanations": {
+        "a": "Explanation",
+        "b": "Explanation",
+        "c": "Explanation",
+        "d": "Explanation"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+        {
+      "question": "4. During sample preparation, adding a drop of distilled water helps to:",
+      "answers": {
+        "a": "Increase the magnification",
+        "b": "Disperse agglomerated particles",
+        "c": "Clean the microscope lens",
+        "d": "Change the color of particles"
+      },
+      "explanations": {
+        "a": "Explanation",
+        "b": "Explanation",
+        "c": "Explanation",
+        "d": "Explanation"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+        {
+      "question": "5. The x-axis of the particle size distribution curve represents:",
+      "answers": {
+        "a": "Number of particles",
+        "b": "Particle size",
+        "c": "Frequency percentage",
+        "d": "Optical magnification"
+      },
+      "explanations": {
+        "a": "Explanation",
+        "b": "Explanation",
+        "c": "Explanation",
+        "d": "Explanation"
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  ]
+}
