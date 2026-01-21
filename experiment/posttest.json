@@ -9,12 +9,7 @@
         "c": "Dₘ = nᵢ / Σdᵢ",
         "d": "Dₘ = Σ(dᵢ)² / Σnᵢ"
       },
-      "explanations": {
-        "a": "Explanation",
-        "b": "Explanation",
-        "c": "Explanation",
-        "d": "Explanation"
-      },
+      
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
@@ -26,12 +21,7 @@
         "c": "Narrow distribution",
         "d": "Bimodal distribution"
       },
-      "explanations": {
-        "a": "Explanation",
-        "b": "Explanation",
-        "c": "Explanation",
-        "d": "Explanation"
-      },
+
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
@@ -43,12 +33,7 @@
         "c": "Non-uniform particle distribution",
         "d": "Over-calibration of the microscope"
       },
-      "explanations": {
-        "a": "Explanation",
-        "b": "Explanation",
-        "c": "Explanation",
-        "d": "Explanation"
-      },
+   
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
@@ -60,12 +45,7 @@
         "c": "Clean the microscope lens",
         "d": "Change the color of particles"
       },
-      "explanations": {
-        "a": "Explanation",
-        "b": "Explanation",
-        "c": "Explanation",
-        "d": "Explanation"
-      },
+
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
@@ -77,12 +57,7 @@
         "c": "Frequency percentage",
         "d": "Optical magnification"
       },
-      "explanations": {
-        "a": "Explanation",
-        "b": "Explanation",
-        "c": "Explanation",
-        "d": "Explanation"
-      },
+
       "correctAnswer": "b",
       "difficulty": "beginner"
     }

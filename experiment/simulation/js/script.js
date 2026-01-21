@@ -198,6 +198,7 @@ stageometerScale.addEventListener("click", () => {
 });
 
 const next1 = document.getElementById("next-btn1");
+let counter = 0;
 
 next1.addEventListener("click", () => {
       if (!experimentState.stageometerPlaced) {
@@ -218,34 +219,44 @@ next1.addEventListener("click", () => {
     //    }
     //  }
      // If all steps are completed, proceed to the next page
-
     
     const section1 = document.getElementById('section-1');
     const section2 = document.getElementById('section-2');
 
+
     section1.style.display = 'none';
     section2.style.display = 'block';
+
+ 
+    if (!experimentState.nextButton) {
+        counter++;
+    }
 
     console.log("1is clicked")
     // Mark nextbutton as placed
     experimentState.nextButton = true;
-
+    
     const next2 = document.getElementById("next-btn2");
     
     next2.style.display = 'flex'
    })
 
-
+     
+    
     const nextsecondtime = document.getElementById('next-btn');
 
     // Add event listener for the Next button
     nextsecondtime.addEventListener('click', function() {
         const section1 = document.getElementById('section-1');
         const section2 = document.getElementById('section-2');
+        if (counter == 1) {
+        
         // Navigate back to section1
+        
          section1.style.display = 'block';
          section2.style.display = 'none';
-
+         console.log(counter);
+}
          console.log("hello")
     });
 
@@ -366,12 +377,12 @@ previousglass.addEventListener("click", () =>{
     } 
 
     if (!experimentState.pucki) {
-        updateInstruction("You need to click on tube to prepare sample. Click on the pucki.");
+        updateInstruction("You need to click on tube to prepare sample. Click on the Dropper.");
          return;
      }
 
     if (!experimentState.samplePrepared) {
-        updateInstruction("You need to prepare the sample first. Click on the pucki.");
+        updateInstruction("You need to prepare the sample first. Click on the Dropper.");
         return;
     }
   
@@ -393,7 +404,7 @@ glass2.addEventListener("click", () => {
     }
 
     if (!experimentState.pucki) {
-        updateInstruction("You need to prepare the sample first. Click on the pucki.");
+        updateInstruction("You need to prepare the sample first. Click on the Dropper.");
         return;
     }
 
@@ -447,7 +458,7 @@ const next2 = document.getElementById("next-btn2");
      }
 
      if (!experimentState.pucki) {
-        updateInstruction("You need to click on tube to prepare sample. Click on the pucki.");
+        updateInstruction("You need to click on tube to prepare sample. Click on the Dropper.");
          return;
      }
 
@@ -479,8 +490,17 @@ const next2 = document.getElementById("next-btn2");
 
     sampleInMicroscope.style.display = 'block';
     stageometerInMicroscope.style.display = 'none';
-
     });
+
+    const nextBtn = document.getElementById('next-btn');
+nextBtn.addEventListener('click', () => {
+    if (experimentState.samplePrepared) {
+        counter++;
+        console.log(counter);
+        window.location.reload();
+    }
+    
+});
 
 const img = document.getElementById('stageometer');
 
