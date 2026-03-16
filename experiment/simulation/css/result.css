@@ -1,0 +1,130 @@
+
+#body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: white;
+      }
+
+      #header {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        padding: 10px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #222222;
+      }
+
+      .container-calibration{
+        width: 88%;
+        height: 60%;
+        background: rgb(10 10 9);
+        border-radius: 7px;
+        padding: 3%;
+        margin: 2% auto 4% auto;
+      }
+      #result-container {
+        position: absolute;
+        width: 97%;
+        height: 95%;
+        display: flexbox;
+        align-items: center;
+        background: rgb(242, 217, 119);
+        border-radius: 7px;
+        box-shadow:
+          inset 0 0 10px #e53935,
+          outset 0 0 20px #e53935;
+        z-index: 100000;
+        overflow-y: scroll;
+        scrollbar-color: #686868 transparent;
+        margin: 10px;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .show {
+        display: block;
+      }
+
+      #ResultO {
+        position: absolute;
+        top: 24%;
+        right: 1%;
+        padding: 10px 33px;
+        background: #c7c946;
+        color: white;
+        border-radius: 5px;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+        z-index: 100;
+      }
+
+      #cross {
+        margin-right: 2%;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        cursor: pointer;
+        z-index: 100;
+      }
+
+
+      #h2 {
+        margin-left: 45%;
+        text-wrap-style: pretty;
+      }
+      table {
+        width: 95%;
+        margin: auto;
+        border-collapse: collapse;
+        text-align: center;
+      }
+      th {
+        background: #e53935;
+        padding: 10px;
+        border: 1px solid white;
+      }
+      td {
+        background: black;
+        color: #f5c16c;
+        padding: 8px;
+        border: 1px solid white;
+      }
+      input {
+        width: 150px;
+        text-align: center;
+        border: none;
+        appearance: none;
+      }
+      button {
+        margin: 20px auto;
+        display: block;
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+      .total-row td {
+        background: #e53935;
+        color: white;
+        font-weight: bold;
+      }
+      .result-box {
+        width: 95%;
+        margin: 20px auto;
+        background: black;
+        padding: 20px;
+        border: 2px solid #e53935;
+        font-size: 18px;
+      }
+      .highlight {
+        color: #f5c16c;
+        font-weight: bold;
+      }
+
+      
+      
